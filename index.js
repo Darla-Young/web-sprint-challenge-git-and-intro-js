@@ -244,14 +244,12 @@ Use listOfNames to do the following:
 */
 
 function listOfNames(artarr) {
-  let newArr = [];
-  for (let i = 0; i < artarr.length; i++) {
-    newArr.push(artarr[i].name);
+  let newArr = [...artarr];
+  for (let i = 0; i < newArr.length; i++) {
+    newArr[i] = artarr[i].name;
   }
   return newArr;
 }
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -262,11 +260,11 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(artarr, i) {
+  let newArr = [...artarr];
+  newArr.splice(i, 1);
+  return newArr;
 }
-
-
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
