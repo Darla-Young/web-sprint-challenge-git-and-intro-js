@@ -303,11 +303,17 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(artarr) {
+  return artarr
+    .filter((artarr) => {
+      return artarr.paintings > 100;
+    })
+    .map((artarr) => {
+      return artarr.name;
+    })
 }
 
-
+console.log("task 7: ", lotsOfArt(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
